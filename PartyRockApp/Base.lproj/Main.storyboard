@@ -17,11 +17,63 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="partybanner" translatesAutoresizingMaskIntoConstraints="NO" id="2Lq-er-hOp">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="174" id="Sde-IZ-RuC"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dSb-me-750">
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="bR7-rt-21i">
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uci-Fk-C1l">
+                                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                                <state key="normal" title="Top Videos">
+                                                    <color key="titleColor" red="0.8007013201713562" green="0.014597587287425995" blue="0.60090380907058716" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Z9-oJ-rQf">
+                                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                                <state key="normal" title="Top Songs">
+                                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GPV-zF-w1W">
+                                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                                <state key="normal" title="Events">
+                                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.07048160582780838" green="0.86641806364059448" blue="0.96403020620346069" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="bR7-rt-21i" firstAttribute="top" secondItem="dSb-me-750" secondAttribute="top" constant="3" id="7SC-lA-l5L"/>
+                                    <constraint firstAttribute="height" constant="37" id="E2x-y2-7e6"/>
+                                    <constraint firstItem="bR7-rt-21i" firstAttribute="leading" secondItem="dSb-me-750" secondAttribute="leading" constant="8" id="FAO-du-cfp"/>
+                                    <constraint firstAttribute="trailing" secondItem="bR7-rt-21i" secondAttribute="trailing" constant="8" id="kDY-ia-PGR"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="dSb-me-750" secondAttribute="trailing" id="5di-id-dbN"/>
+                            <constraint firstItem="dSb-me-750" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fUq-Vc-m2U"/>
+                            <constraint firstItem="2Lq-er-hOp" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ovy-xu-gOn"/>
+                            <constraint firstItem="dSb-me-750" firstAttribute="top" secondItem="2Lq-er-hOp" secondAttribute="bottom" id="py6-Sz-2fF"/>
+                            <constraint firstAttribute="trailing" secondItem="2Lq-er-hOp" secondAttribute="trailing" id="uJ2-4N-F0S"/>
+                            <constraint firstItem="2Lq-er-hOp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="zi4-t3-n0Z"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="37.331334332833585"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="partybanner" width="610" height="297"/>
+    </resources>
 </document>
