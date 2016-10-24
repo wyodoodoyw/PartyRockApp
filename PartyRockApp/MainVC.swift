@@ -53,5 +53,17 @@ class MainVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         return partyRocks.count
     }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let partyRock = partyRocks[indexPath.row]
+        performSegue(withIdentifier: "VideoPlayerVC", sender: partyRock)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? VideoPlayerVC {
+            if let party = sender as? PartyRock {
+                destination.partyRock = party
+            }
+        }
+    }
 }
 
