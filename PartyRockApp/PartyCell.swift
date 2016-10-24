@@ -22,5 +22,21 @@ class PartyCell: UITableViewCell {
         videoTitleLabel.text = partyRock.videoTitle
         
         // TODO: set image from URL
+        let url = URL(string: partyRock.imageURL)!
+        
+        DispatchQueue.global().async {
+            // put operations, such as downloading images from the net, on an asynchronous thread to prevent
+            // slowing down the app
+            
+            do {
+                let data = try Data(contentsOf: url)
+                DispatchQueue.global().sync {
+                    // have data, can update UI
+                    self.videoPreviewImage.image = UIImage(data: data)
+                }
+            } catch {
+                // handle the error
+            }
+        }
     }
 }
